@@ -4,7 +4,7 @@ import './index.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import * as Sentry from '@Sentry/react';
+import * as Sentry from '@sentry/react';
 
 const queryClient = new QueryClient();
 
