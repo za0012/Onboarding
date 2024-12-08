@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# 🖥 프론트엔드 개발 온보딩 과제
 # 배포 링크
 https://github.com/za0012/Onboarding
 
