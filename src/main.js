@@ -4,11 +4,8 @@ import App from './App.js';
 import './index.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-
-import * as Sentry from '@sentry/react'
-
+import * as Sentry from '@sentry/react';
 const queryClient = new QueryClient();
-
 Sentry.init({
     dsn: 'https://840b2991bdbb8d006b02582c4238a3c9@o4508431345909760.ingest.us.sentry.io/4508431354560512',
     integrations: [
