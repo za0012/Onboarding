@@ -3,7 +3,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { getUserProfile, updateProfile } from '../api/auth';
 import userStore from '../store/store';
 import Modal from '../components/Modal';
-
+import '../css/Home.css';
 
 const Mypage = () => {
     const { user } = userStore((state) => state);
@@ -55,8 +55,8 @@ const Mypage = () => {
     }
 
     return (
-        <div className="flex h-screen bg-fefae0 items-center justify-center p-8 mainBox">
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md border border-gray-300">
+        <div className="centerBox mainBox">
+            <div className="formBox">
                 <p>mypage</p>
                 <p>{data?.id}</p>
                 <p>{data?.nickname}</p>
@@ -75,6 +75,17 @@ const Mypage = () => {
                                 >
                                     프로필 사진
                                 </label>
+                                <div className="mt-4">
+                                    <img
+                                        src={
+                                            imgFile
+                                                ? URL.createObjectURL(imgFile)
+                                                : data?.avatar || ''
+                                        }
+                                        alt="Avatar Preview"
+                                        className="mypageImg"
+                                    />
+                                </div>
                                 <input
                                     type="file"
                                     id="avatar"
@@ -88,17 +99,6 @@ const Mypage = () => {
                                     }
                                     className="w-full p-2 border border-gray-300 rounded"
                                 />
-                                <div className="mt-4">
-                                    <img
-                                        src={
-                                            imgFile
-                                                ? URL.createObjectURL(imgFile)
-                                                : data?.avatar || ''
-                                        }
-                                        alt="Avatar Preview"
-                                        className="w-20 h-20 rounded-full object-cover border border-gray-300"
-                                    />
-                                </div>
                             </div>
                             {/* 닉네임 변경 */}
                             <div>
@@ -116,14 +116,14 @@ const Mypage = () => {
                                         setNickname(e.target.value)
                                     }
                                     placeholder="새 닉네임 입력"
-                                    className="w-full p-3 border border-gray-300 rounded"
+                                    className="inputBox"
                                 />
                             </div>
                             {/* 제출 버튼 */}
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full bg-green-500 text-white p-3 rounded hover:bg-green-600 transition"
+                                className="formButton"
                             >
                                 {isLoading ? '업데이트 중...' : '업데이트'}
                             </button>

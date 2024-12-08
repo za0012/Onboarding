@@ -1,7 +1,10 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
+    "compilerOptions": {
+        "lib": ["ES2015", "DOM"], // ES2015 이상을 포함하도록 설정
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "types": ["@testing-library/jest-dom", "@types/jest"]
+    },
+    "include": ["src/**/*"]
 }

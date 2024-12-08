@@ -43,8 +43,8 @@ const Signup = () => {
     };
 
     return (
-        <div className="flex h-screen bg-fefae0 items-center justify-center p-8 mainBox">
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md border border-gray-300">
+        <div className="centerBox mainBox">
+            <div className="formBox">
                 <form onSubmit={onSubmitHandler} className="space-y-4">
                     <input
                         type="text"
@@ -53,7 +53,7 @@ const Signup = () => {
                             setUserData({ ...userData, id: e.target.value });
                         }}
                         placeholder="ID"
-                        className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="inputBox"
                         required
                     />
                     <input
@@ -66,7 +66,7 @@ const Signup = () => {
                             });
                         }}
                         placeholder="PW"
-                        className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="inputBox"
                         required
                     />
                     <input
@@ -79,13 +79,10 @@ const Signup = () => {
                             });
                         }}
                         placeholder="NickName"
-                        className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="inputBox"
                         required
                     />
-                    <button
-                        type="submit"
-                        className="w-full bg-green-500 text-white p-3 rounded hover:bg-green-600 transition"
-                    >
+                    <button type="submit" className="formButton">
                         회원가입
                     </button>
                 </form>

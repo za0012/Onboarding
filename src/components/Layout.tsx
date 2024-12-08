@@ -27,13 +27,13 @@ const Layout = () => {
                         <p>호호호호홈</p>
                     </Link>
                     {user.success ? (
-                        <div className="flex gap-[15px]">
+                        <div className="flex gap-[16px]">
                             <Link to="/Mypage">마이페이지</Link>
                             <span>|</span>
                             <button onClick={handleLogout}>로그아웃</button>
                         </div>
                     ) : (
-                        <div className="flex gap-[15px]">
+                        <div className="flex gap-[16px]">
                             <Link to="/signup">회원가입</Link>
                             <Link to="/login">로그인</Link>
                         </div>
