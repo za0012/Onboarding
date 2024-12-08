@@ -4,7 +4,6 @@ import './index.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import { BrowserTracing } from '@Sentry/tracing';
 import * as Sentry from '@Sentry/react';
 
 const queryClient = new QueryClient();
