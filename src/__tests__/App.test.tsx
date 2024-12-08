@@ -1,7 +1,7 @@
 // Imports
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'; // jest-dom 확장을 포함해야 toBeInTheDocument 사용 가능
-import App from '../App';
+import App from '../App.js';
 
 // Tests
 test('Renders main page correctly', async () => {

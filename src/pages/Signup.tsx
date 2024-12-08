@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useState } from 'react';
-import { register } from '../api/auth';
+import { register } from '../api/auth.js';
 import { useNavigate } from 'react-router-dom';
-import { UserData } from '../types/Sign';
+import { UserData } from '../types/Sign.js';
 import '../css/Home.css';
 
 const Signup = () => {

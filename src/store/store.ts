@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { UserDataStore } from './types';
+import { UserDataStore } from './types.js';
 import userImage from '../assets/userDefaultImg.png'
 
 const userStore = create(

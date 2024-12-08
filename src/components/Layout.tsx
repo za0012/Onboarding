@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import useUserStore from '../store/store';
+import useUserStore from '../store/store.js';
 
 const Layout = () => {
     const navigate = useNavigate();

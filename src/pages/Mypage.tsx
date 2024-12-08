@@ -1,8 +1,8 @@
 import { useState, useCallback } from 'react';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { getUserProfile, updateProfile } from '../api/auth';
-import userStore from '../store/store';
-import Modal from '../components/Modal';
+import { getUserProfile, updateProfile } from '../api/auth.js';
+import userStore from '../store/store.js';
+import Modal from '../components/Modal.js';
 import '../css/Home.css';
 
 const Mypage = () => {

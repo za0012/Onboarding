@@ -1,9 +1,9 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useState } from 'react';
-import { login } from '../api/auth';
+import { login } from '../api/auth.js';
 import { useNavigate } from 'react-router-dom';
-import { UserDataLog } from '../types/Sign';
-import userStore from '../store/store';
+import { UserDataLog } from '../types/Sign.js';
+import userStore from '../store/store.js';
 
 import '../css/Home.css';
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import Router from './shared/Router';
+import Router from './shared/Router.js';
 
 function App() {
     const [count, setCount] = useState(0);

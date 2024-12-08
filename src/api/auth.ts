@@ -4,8 +4,8 @@ import {
     UserDataLog,
     LoginResponse,
     TokenResponse,
-} from '../types/Sign';
-import { UpdateResponse } from '../types/MypageType';
+} from '../types/Sign.js';
+import { UpdateResponse } from '../types/MypageType.js';
 import axios from 'axios';
 
 const API_URL = 'https://moneyfulpublicpolicy.co.kr';
