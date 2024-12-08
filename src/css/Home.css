@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ClimateCrisisKR-1979';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKR-1979.woff2')
+        format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+        format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@layer base {
+    body {
+        font-family: 'Pretendard-Regular';
+    }
+}
+
+@layer components {
+    .mainBox {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../assets/cherryBlossom1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .homeH1 {
+        font-family: 'ClimateCrisisKR-1979';
+        font-size: 6em;
+        color: white;
+    }
+}
