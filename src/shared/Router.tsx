@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import RouteProtect from '../components/RouteProtect.js';
+import PrivateRoute from '../components/PrivateRoute.js';
 import Home from '../pages/Home.js';
 import Signup from '../pages/Signup.js';
 import Login from '../pages/Login.js';
@@ -14,14 +14,9 @@ const Router = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/Signup" element={<Signup />} />
                 <Route path="/Login" element={<Login />} />
-                <Route
-                    path="/Mypage"
-                    element={
-                        <RouteProtect>
-                            <Mypage />
-                        </RouteProtect>
-                    }
-                />
+                <Route element={<PrivateRoute />}>
+                    <Route path="/Mypage" element={<Mypage />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     );

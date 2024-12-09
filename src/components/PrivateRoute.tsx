@@ -1,13 +1,13 @@
 import userStore from '../store/store.js';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
-const RouteProtect = ({ children }: any) => {
+const PrivateRoute = () => {
     const { user } = userStore((state) => state);
-    if (!user) {
+    if (!user.success) {
         alert('로그인 해주세요😢');
         return <Navigate to={'/'} />;
     }
-    return children;
+    return <Outlet />;
 };
 
-export default RouteProtect;
+export default PrivateRoute;
