@@ -76,7 +76,6 @@ const Mypage = () => {
                             프로필 변경
                         </h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            {/* 아바타 업로드 */}
                             <div>
                                 <label
                                     htmlFor="avatar"
@@ -109,7 +108,6 @@ const Mypage = () => {
                                     className="w-full p-2 border border-gray-300 rounded"
                                 />
                             </div>
-                            {/* 닉네임 변경 */}
                             <div>
                                 <label
                                     htmlFor="nickname"
@@ -128,7 +126,6 @@ const Mypage = () => {
                                     className="inputBox"
                                 />
                             </div>
-                            {/* 제출 버튼 */}
                             <button
                                 type="submit"
                                 disabled={isLoading}
