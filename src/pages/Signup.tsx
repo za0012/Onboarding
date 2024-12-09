@@ -45,6 +45,7 @@ const Signup = () => {
     return (
         <div className="centerBox mainBox">
             <div className="formBox">
+                <h1 className="formTitle">Sign-up</h1>
                 <form onSubmit={onSubmitHandler} className="space-y-4">
                     <input
                         type="text"

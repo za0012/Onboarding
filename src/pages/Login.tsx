@@ -43,6 +43,7 @@ const Login = () => {
     return (
         <div className="centerBox mainBox">
             <div className="formBox">
+                <h1 className='formTitle'>Login</h1>
                 <form onSubmit={onSubmitHandler} className="space-y-4">
                     <input
                         type="text"

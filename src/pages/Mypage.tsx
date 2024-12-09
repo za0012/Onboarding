@@ -40,6 +40,7 @@ const Mypage = () => {
         if (imgFile) formData.append('avatar', imgFile);
         if (nickname) formData.append('nickname', nickname); //왜 if? 데이터가 존재한다면 변경해줘야 하기 때문이다.
         mutate(formData);
+        location.reload();
     };
 
     const onClickToggleModal = useCallback(() => {
@@ -57,15 +58,23 @@ const Mypage = () => {
     return (
         <div className="centerBox mainBox">
             <div className="formBox">
-                <p>mypage</p>
-                <p>{data?.id}</p>
-                <p>{data?.nickname}</p>
+                <p className="formTitle">mypage</p>
+                <p className="formText">아이디 : {data?.id}</p>
+                <p className="formText mb-4">닉네임 : {data?.nickname}</p>
                 <img src={`${data?.avatar}`} />
+                <button
+                    className="formButton mt-4"
+                    onClick={onClickToggleModal}
+                >
+                    프로필 변경
+                </button>
             </div>
             {isOpenModal && (
                 <Modal onClickToggleModal={onClickToggleModal}>
                     <div className="p-8 bg-white rounded shadow-md max-w-md mx-auto">
-                        <h2 className="text-2xl font-bold mb-6">프로필 변경</h2>
+                        <h2 className="text-2xl font-bold mb-6 mt-4">
+                            프로필 변경
+                        </h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             {/* 아바타 업로드 */}
                             <div>
@@ -131,7 +140,6 @@ const Mypage = () => {
                     </div>
                 </Modal>
             )}
-            <button onClick={onClickToggleModal}>Open Modal</button>
         </div>
     );
 };

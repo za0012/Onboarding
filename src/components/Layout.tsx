@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import useUserStore from '../store/store.js';
+import '../css/Home.css'
 
 const Layout = () => {
     const navigate = useNavigate();
@@ -19,11 +20,10 @@ const Layout = () => {
     };
 
     return (
-        <div>
-            <header className="fixed z-[30] w-[100%] h-[60px] box-border py-[5px] pl-[50px] pr-[100px] text-white">
-                <nav className="flex flex-row justify-between text-[16px] min-w-[800px] items-center">
+        <div className='headerBox'>
+            <header className="fixed z-[30] w-[100%] box-border py-[5px] pl-[50px] pr-[100px] text-white">
+                <nav className="flex flex-row justify-between text-[18px] h-[60px] min-w-[100px] items-center">
                     <Link to="/">
-                        {/* <img src={homeImg} alt="홈" className="w-[40px]" /> */}
                         <p>호호호호홈</p>
                     </Link>
                     {user.success ? (
