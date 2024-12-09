@@ -1,6 +1,6 @@
 # 🖥 프론트엔드 개발 온보딩 과제
 # 배포 링크
-https://onboarding-cfg3.vercel.app/
+https://onboarding-ybwv.vercel.app/
 
 # JWT 기술분석 blog
 https://gecko0012.tistory.com/manage/posts/
